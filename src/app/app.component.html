@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  </head>
+  <body>
+<h1 style="display: flex;height: 150px;justify-content:center;align-items:center">CURRENCY CONVERSION</h1>
+<div style="display: flex;height: 100px;justify-content:center;align-items:center">
+  <div class="main-container">
+  <div class="selection-cont">
+    
+    <input type="text" name="quantity" (keyup)="convert()" [(ngModel)]="quantity" >
+<select #c1 name="" id="country1"  (mouseleave)="changebase(c1.value);convert()">
+  <option value="INR">
+    <a href="#">
+      <img src=
+      "https://media.geeksforgeeks.org/wp-content/uploads/20200630132503/iflag.jpg"
+      width="20" height="15">India Rupee</a></option>
+      
+  <option value="USD">US Dollar</option>
+  <option value="EUR">Euro</option>
+  <option value="AUD">Australian Dollar</option>
+  <option value="GBP">British Pound</option>
+  <option value="CAD">Canadian Dollar</option>
+  <option value="JYP">Japanese Yen</option>
+  <option value="NZD">New Zealand Dollar</option>
+  <option value="CHF">Swiss Franc</option>
+  <option value="ZAR">South African Rand</option>
+  <option value="RUB">Russian Ruble</option>
+  <option value="BGN">Bulgarian Lev</option>
+  <option value="SGD">Singapore Dollar</option>
+  <option value="HKD">Hong Kong Dollar</option>
+  <option value="SEK">Swedish Krona</option>
+  <option value="THB">Thai Baht</option>
+  <option value="HUF">Hungarian Forint</option>
+  <option value="CNY">Chinese Yuan Renminbi</option>
+  <option value="NOK">Norwegian Krone</option>
+  <option value="MXN">Mexican Peso</option>
+  <option value="DKK">Danish Krone</option>
+  <option value="MYR">Malaysian Ringgit</option>
+</select>
+
+<p>to</p>
+<select #c2 name="" id="country1" (mouseleave)="tocountry(c2.value);convert()">
+  <option value="USD">US Dollar</option>
+  <option value="INR">Indian Rupee</option>
+  <option value="EUR">Euro</option>
+  <option value="AUD">Australian Dollar</option>
+  <option value="GBP">British Pound</option>
+  <option value="CAD">Canadian Dollar</option>
+  <option value="JYP">Japanese Yen</option>
+  <option value="NZD">New Zealand Dollar</option>
+  <option value="CHF">Swiss Franc</option>
+  <option value="ZAR">South African Rand</option>
+  <option value="RUB">Russian Ruble</option>
+  <option value="BGN">Bulgarian Lev</option>
+  <option value="SGD">Singapore Dollar</option>
+  <option value="HKD">Hong Kong Dollar</option>
+  <option value="SEK">Swedish Krona</option>
+  <option value="THB">Thai Baht</option>
+  <option value="HUF">Hungarian Forint</option>
+  <option value="CNY">Chinese Yuan Renminbi</option>
+  <option value="NOK">Norwegian Krone</option>
+  <option value="MXN">Mexican Peso</option>
+  <option value="DKK">Danish Krone</option>
+  <option value="MYR">Malaysian Ringgit</option>
+</select>
+  </div>
+  
+  <div class="result-container">
+<p>{{quantity}} {{from}}</p>
+<p>=</p>
+<p>{{result}} {{to}}</p>
+  </div>
+  <button (click)="convert()">Convert</button>
+</div>
+</div>
+</body>
+</html>
